@@ -33,9 +33,15 @@ public class An1I_problem1 {
 		return i%2;
 	}
 	
-	/**
-	 * Domain = Definitionsbereich
-	 */
+	public static void isFunction(){
+		if(yesNo("Gibt es für eine Eingabe mehr als ein Resultat?")){
+			print("Ist keine Funktion.");
+		}
+		else{
+			print("Ist Funktion.");
+		}
+	}
+
 	public static void findDomain(){
 		print("Der Definitionsbereich ist die Menge aller Zahlen,");
 		print("für die es einen Funktionswert gibt.");
