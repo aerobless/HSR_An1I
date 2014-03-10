@@ -1,39 +1,15 @@
-package ch.theowinter.An1I.series1;
+package ch.theowinter.An1I.utilities;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class An1I_problem1 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//System.out.println(gA(3));
-		print(gC(5)+"");
-		print(gC(-2)+"");
-		
-		findDomain();
-
-	}
-	
-	//Ex C
-	public static int gC(int x){
-		int returnValue = 0;
-		if(x<0){
-			returnValue=1-x;		
-		}
-		else{
-			returnValue=x-1;
-		}
-		return returnValue;
-	}
-	
-	//Ex A
-	public static int gA(int i) {
-		return i%2;
-	}
-	
-	public static void isFunction(){
+/**
+ * Contains various logical tools that can be re-used in more
+ * then one exercise.
+ */
+public class LogicEngine {
+	public void isFunction(){
 		if(yesNo("Gibt es für eine Eingabe mehr als ein Resultat?")){
 			print("Ist keine Funktion.");
 		}
@@ -42,7 +18,7 @@ public class An1I_problem1 {
 		}
 	}
 
-	public static void findDomain(){
+	public void findDomain(){
 		print("Der Definitionsbereich ist die Menge aller Zahlen,");
 		print("für die es einen Funktionswert gibt.");
 		if(yesNo("Können wir negative Zahlen eingebn?")){
@@ -71,11 +47,11 @@ public class An1I_problem1 {
 		}
 	}
 	
-	public static void print(String input){
+	public void print(String input){
 		System.out.println(input);
 	}
 	
-	public static boolean yesNo(String question){
+	public boolean yesNo(String question){
 		boolean result = false;
 		BufferedReader buffer=new BufferedReader(new InputStreamReader(System.in));
 		String line;
