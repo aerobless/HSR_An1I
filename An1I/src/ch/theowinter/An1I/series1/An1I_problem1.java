@@ -1,19 +1,35 @@
-package ch.theowinter.An1I.problem_1;
+package ch.theowinter.An1I.series1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MainAn1I {
+public class An1I_problem1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(g(3));
+		//System.out.println(gA(3));
+		print(gC(5)+"");
+		print(gC(-2)+"");
+		
 		findDomain();
 
 	}
 	
-	public static int g(int i) {
+	//Ex C
+	public static int gC(int x){
+		int returnValue = 0;
+		if(x<0){
+			returnValue=1-x;		
+		}
+		else{
+			returnValue=x-1;
+		}
+		return returnValue;
+	}
+	
+	//Ex A
+	public static int gA(int i) {
 		return i%2;
 	}
 	
