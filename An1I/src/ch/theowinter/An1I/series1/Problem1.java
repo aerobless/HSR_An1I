@@ -2,7 +2,7 @@ package ch.theowinter.An1I.series1;
 
 import ch.theowinter.An1I.utilities.LogicEngine;
 
-public class problem1 {
+public class Problem1 {
 	static LogicEngine logic = new LogicEngine();
 
 	public static void main(String[] args) {

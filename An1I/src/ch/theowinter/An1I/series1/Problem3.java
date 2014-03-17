@@ -2,7 +2,7 @@ package ch.theowinter.An1I.series1;
 
 import ch.theowinter.An1I.utilities.LogicEngine;
 
-public class problem2 {
+public class Problem3 {
 	static LogicEngine logic = new LogicEngine();
 
 	/**
@@ -14,8 +14,17 @@ public class problem2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int peopleInTower = 1000;
+		while(optionElevator(peopleInTower)>optionStairs(peopleInTower)){
+			--peopleInTower;
+		}
+		++peopleInTower;
+		System.out.println("People in tower: "+peopleInTower);
 		logic.print("Elevator Option: "+optionElevator(peopleInTower)+"seconds");
 		logic.print("Stair Option: "+optionStairs(peopleInTower)+"seconds");
+		
+		/**
+		 * ab 251 Personen lohnt sicht die Trepper mehr.
+		 */
 	}
 	
 	/**
@@ -29,7 +38,7 @@ public class problem2 {
 	 * @return
 	 */
 	public static int optionElevator(int numberOfPeopleOnTower){
-		int timeItTakesToEvacuateInSeconds = 0;
+		int timeItTakesToEvacuateInSeconds = 50; //Lift muss zuerst hochfahren offenbar..
 		while(numberOfPeopleOnTower>0){
 			//Open close doors per ride 15s, up&down 40s
 			timeItTakesToEvacuateInSeconds +=55;
